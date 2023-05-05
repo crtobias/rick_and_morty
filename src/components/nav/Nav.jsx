@@ -2,7 +2,11 @@ import style from './Nav.module.css'
 import SearchBar from '../searchbar/SearchBar';
 import { Link } from 'react-router-dom';
 
+
 export default function Nav({onSearch}){
+
+
+
     return (
         <nav className={style.nav}>
             <ul className={style.sea}>
