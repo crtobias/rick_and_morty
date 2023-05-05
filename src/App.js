@@ -1,26 +1,57 @@
 import './App.css';
-import Card from './components/card/Card';
 import Cards from './components/cards/Cards';
-import SearchBar from './components/searchbar/SearchBar';
-import characters, { Rick } from './data.js';
+import Nav from './components/nav/Nav';
+import {useState} from 'react';
+import axios from 'axios';
+import { Routes, Route } from 'react-router-dom';
+import About from './components/about/About';
+import Detail from './components/detail/Detail';
+import Home from './components/home/Home'
 
-function App() {
-   return (
+
+function App(){
+
+   const [characters, setCharacters] = useState([]);
+   
+
+function onSearch(id) {
+   console.log(id);
+   axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+
+
+   if (data.name ) {
+         setCharacters((oldChars) => [...oldChars, data]);
+      } else {
+         window.alert('¡No hay personajes con este ID!');
+      } 
+   });
+}
+
+function onClose(id) {
+   console.log(id);
+   setCharacters((oldChars) => oldChars.filter((char) => char.id!== id));
+}
+
+
+
+
+
+   return(
       <div className='App'>
-         <SearchBar onSearch={(characterID) => window.alert(characterID)} />
-         <Cards characters={characters} />
-         <Card
-            id={Rick.id}
-            name={Rick.name}
-            status={Rick.status}
-            species={Rick.species}
-            gender={Rick.gender}
-            origin={Rick.origin.name}
-            image={Rick.image}
-            onClose={() => window.alert('Emulamos que se cierra la card')}
-         />
+         
+         <Nav onSearch={onSearch}/>
+         
+         <Routes>
+            <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/detail/:id' element={<Detail/>}/>
+         </Routes>
       </div>
    );
 }
 
+
+
+
 export default App;
+

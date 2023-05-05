@@ -7,6 +7,7 @@ export default function Cards(props) {
       <div>
          {characters.map((character) => (
             <Card
+            id={character.id}
             key={character.id}
             name={character.name}
             status={character.status}
@@ -14,9 +15,9 @@ export default function Cards(props) {
             gender={character.gender}
             origin={character.origin}
             image={character.image}
-            onClose={() => window.alert('Emulamos que se cierra la card')}
+            onClose={props.onClose}
             /> 
-         ))};
+         ))}
 
       </div>
    )

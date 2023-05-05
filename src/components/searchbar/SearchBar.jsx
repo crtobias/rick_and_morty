@@ -1,10 +1,20 @@
-import style from './searchbar.module.css'
+import { useState } from "react";
 
-export default function SearchBar(props) {
+   const SearchBar =({onSearch}) =>{
+   const [id,setId] = useState('')
+
+   const handleChange = (e) =>{
+      setId(e.target.value)
+   }
+
    return (
       <div>
-         <input type='search' />
-         <button onClick={props.onSearch}>Agregar</button>
+         <input type='search' id='search' value={id} onChange={handleChange}/>
+         <button onClick={()=>onSearch(id)}>Agregar</button>
       </div>
    );
 }
+
+
+
+export default SearchBar;
