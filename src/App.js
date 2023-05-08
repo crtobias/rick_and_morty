@@ -46,7 +46,6 @@ function onSearch(id) {
 }
 
 function onClose(id) {
-   console.log(id);
    setCharacters((oldChars) => oldChars.filter((char) => char.id!== id));
 }
 

@@ -3,8 +3,8 @@ import { useState } from "react";
    const SearchBar =({onSearch}) =>{
    const [id,setId] = useState('')
 
-   const handleChange = (e) =>{
-      setId(e.target.value)
+   const handleChange = (event) =>{
+      setId(event.target.value)
    }
 
    return (

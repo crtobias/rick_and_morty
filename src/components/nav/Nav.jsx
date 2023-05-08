@@ -9,15 +9,16 @@ export default function Nav({onSearch}){
 
     return (
         <nav className={style.nav}>
-            <ul className={style.sea}>
-            <SearchBar onSearch={onSearch} />
-            </ul>
+
             <button className={style.bu}> 
                 <Link to="/home">Home</Link>
             </button>
             <button className={style.bu}>
                 <Link to="/about">About</Link>
             </button>
+            <ul className={style.sea}>
+            <SearchBar onSearch={onSearch} />
+            </ul>
         </nav>
     );
 }
