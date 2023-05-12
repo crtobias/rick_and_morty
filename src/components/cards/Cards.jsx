@@ -1,10 +1,11 @@
 import Card from '../card/Card';
-import style from './cards.module.css';
+import './cards.css';
+
 
 export default function Cards(props) {
    const {characters} = props;
    return(
-      <div>
+      <div class="changuito">
          {characters.map((character) => (
             <Card
             id={character.id}

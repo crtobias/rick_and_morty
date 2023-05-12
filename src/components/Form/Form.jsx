@@ -18,8 +18,6 @@ const Form = (props)=>{
             [event.target.name]:event.target.value
         })
 
-        
-
         setErrors({
             ...errors,
             [event.target.name]: Validation(userData,event.target.name)
@@ -31,15 +29,8 @@ const Form = (props)=>{
         login(userData)
     }
 
-    // useEffect(()=>{
-    //     setErrors({
-    //         ...errors,
-
-    //     })
-    // },[])
-
     return (
-        <div className={style.loginbox}>
+        <div>
             <p>Login</p>
             <form onSubmit={handleSubmit}>
                 <div className={style.userbox}>
@@ -55,13 +46,7 @@ const Form = (props)=>{
                 </div>
                 
                 <div>
-                <button type="submit" className={style.btnn}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Submit
-                </button>
+                <button type="submit" className={style.btnn}>login</button>
                 </div>
             </form>
         </div>
@@ -69,3 +54,4 @@ const Form = (props)=>{
 }
 
 export default Form
+

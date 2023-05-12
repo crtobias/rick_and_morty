@@ -1,4 +1,4 @@
-import style from './Nav.module.css'
+import "./Nav.css"
 import SearchBar from '../searchbar/SearchBar';
 import { Link } from 'react-router-dom';
 
@@ -8,17 +8,24 @@ export default function Nav({onSearch}){
 
 
     return (
-        <nav className={style.nav}>
+        <nav class="navb" >
+            
 
-            <button className={style.bu}> 
+            <button class="but" >
                 <Link to="/home">Home</Link>
             </button>
-            <button className={style.bu}>
+            
+            <button class="but">
                 <Link to="/about">About</Link>
             </button>
-            <ul className={style.sea}>
+
+            <button class="but" >
+                <Link to="/favorite">fav</Link>
+            </button>
+            <ul>
             <SearchBar onSearch={onSearch} />
             </ul>
+
         </nav>
     );
 }

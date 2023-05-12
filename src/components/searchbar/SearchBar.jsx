@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchBar"
 
    const SearchBar =({onSearch}) =>{
    const [id,setId] = useState('')
@@ -8,9 +9,9 @@ import { useState } from "react";
    }
 
    return (
-      <div>
-         <input type='search' id='search' value={id} onChange={handleChange}/>
-         <button onClick={()=>onSearch(id)}>Agregar</button>
+      <div class="sea">
+         <input class="inpu" type='search' id='search' value={id} onChange={handleChange}/>
+         <button  class="bu" onClick={()=>onSearch(id)}>Agregar</button>
       </div>
    );
 }

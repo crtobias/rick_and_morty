@@ -8,6 +8,7 @@ import About from './components/about/About';
 import Detail from './components/detail/Detail';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Form from './components/Form/Form';
+import Favorite from './components/Favorites/Favorites';
 
 
 
@@ -37,11 +38,17 @@ function onSearch(id) {
    axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
 
 
-   if (data.name ) {
-         setCharacters((oldChars) => [...oldChars, data]);
+   if (data.name) {
+      // Buscar si el personaje ya está en el array
+      const characterExists = characters.find(char => char.id === data.id);
+      if (characterExists) {
+         window.alert('¡Este personaje ya está en pantalla!');
       } else {
-         window.alert('¡No hay personajes con este ID!');
-      } 
+         setCharacters(oldChars => [...oldChars, data]);
+      }
+   } else {
+      window.alert('¡No hay personajes con este ID!');
+   } 
    });
 }
 
@@ -63,6 +70,7 @@ const {pathname} = useLocation()
             <Route path='/about' element={<About/>}/>
             <Route path='/detail/:id' element={<Detail/>}/>
             <Route path='/' element={<Form login={login}  />} />
+            <Route path='/favorite' element={<Favorite/>} />
          </Routes>
       </div>
    );
