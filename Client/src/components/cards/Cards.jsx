@@ -4,6 +4,8 @@ import './cards.css';
 
 export default function Cards(props) {
    const {characters} = props;
+
+
    return(
       <div class="changuito">
          {characters.map((character) => (

@@ -18,7 +18,7 @@ axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
     });
 }, [id, history]);
 
-console.log(character);
+
 return (
     <div className={style.detail}>
         

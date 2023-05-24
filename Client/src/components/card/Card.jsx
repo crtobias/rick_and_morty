@@ -14,7 +14,6 @@ const handleFavorite = () => {
    if(isFav){
          removeFav(id);
          setIsfav(false);
-         filterCards("allCharacters");
    }else{
          addFav({id,key,name,onClose,origin,status,gender,species,image});
          setIsfav(true); 
