@@ -10,18 +10,18 @@ export default function Nav({onSearch}){
     return (
         <nav class="navb" >
             
+            <Link to="/home"><button id="i" class="but" >
+               Home
+            </button></Link>
 
-            <button class="but" >
-                <Link to="/home">Home</Link>
-            </button>
             
-            <button class="but">
-                <Link to="/about">About</Link>
-            </button>
+            <Link to="/about"><button class="but" >
+               About
+            </button></Link>
 
-            <button class="but" >
-                <Link to="/favorite">fav</Link>
-            </button>
+            <Link to="/favorite"><button id="d" class="but" >
+               Favorite
+            </button></Link>
             <ul>
             <SearchBar onSearch={onSearch} />
             </ul>

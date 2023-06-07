@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {Validation} from '../../validacion'
-import style from './Form.module.css'
+import "./form.css"
 
 const Form = (props)=>{
     const {login} = props
@@ -30,23 +30,22 @@ const Form = (props)=>{
     }
 
     return (
-        <div>
-            <p>Login</p>
-            <form onSubmit={handleSubmit}>
-                <div className={style.userbox}>
-                <input required="" type="text" name="email" value={userData.email} onChange={handleChange} />
-                <label htmlFor="email">Email</label>
-                {errors.email !== ''? <span className={style.error}>{errors.email}</span> : ''}
+        <div class="form">
+            <form onSubmit={handleSubmit}  >
+                <div >
+                <label class="aasd" htmlFor="email">Email</label><br/>
+                <input class="aasdc" required="" type="text" name="email" value={userData.email} onChange={handleChange} /> <br />
+                <div class="spanes">{errors.email !== ''? <span  >{errors.email}</span> : ''}</div>
                 </div>
-                <br /><br /><br />
-                <div className={style.userbox}>
-                <input required="" type="text" name="password" value={userData.password} onChange={handleChange}/>
-                {errors.password!== ''? <span className={style.error}>{errors.password}</span> : ''}
-                <label htmlFor="password">Password</label>
+                <br />
+                <div >
+                <label class="aasd" htmlFor="password">Password</label><br />
+                <input  class="aasdc" required="" type="text" name="password" value={userData.password} onChange={handleChange}/> <br />
+                <div class="spanes">{errors.password!== ''? <span >{errors.password}</span> : ''}</div>
                 </div>
-                
+                <br />
                 <div>
-                <button type="submit" className={style.btnn}>login</button>
+                <button type="submit" class="botonnn">login</button>
                 </div>
             </form>
         </div>

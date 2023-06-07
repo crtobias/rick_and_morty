@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SearchBar"
+import "./searchbar.css"
 
    const SearchBar =({onSearch}) =>{
    const [id,setId] = useState('')

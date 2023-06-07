@@ -1,4 +1,19 @@
 .hi{
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 1rem;
 }
+
+.favi{
+        line-height: 1em;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 95vw;
+        border: 1px solid;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 70vh;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+}
+

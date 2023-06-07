@@ -2,12 +2,12 @@
     line-height: 1em;
     overflow-x: hidden;
     overflow-y: scroll;
-    width: 70%;
+    width: 95vw;
     border: 1px solid;
-    margin-top: 7%;
-    margin-left: 25%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     height: 70vh;
-    background-image: url("../../../public/blob-scene-haikei.png");
     background-size: 100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;

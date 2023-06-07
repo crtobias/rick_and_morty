@@ -1,0 +1,42 @@
+.form{
+    background: rgb(42,49,50);
+background: linear-gradient(153deg, rgb(75, 93, 95) 20%, rgba(144,175,197,1) 79%);
+    height: 12rem;
+    width: 16rem;
+    border: thin solid rgb(125, 125, 125);
+    box-shadow: 5px 5px 5px rgb(255, 255, 255);
+    padding: 5px;
+}
+.aasd{
+    font-size: medium;
+    font-weight: 100;
+}
+.aasdc{
+    font-size: medium;
+    font-weight: 100;
+    border: thin solid black;
+    box-shadow: 4px 4px 4px;
+    border-radius: 0.2rem;
+}
+.aasdc:hover{
+    background-color: bisque;
+}
+.botonnn{
+    background-color: #336b87;
+    height: 1.5rem;
+    width: 4rem;
+    border-radius: 0.2rem;
+    border: thin solid black;
+    box-shadow: 4px 4px 4px;
+}
+.botonnn:hover{
+    background-color: #143a4e;
+}
+
+.spanes{
+    font-size: medium;
+    font-weight: 600;
+    height: 1rem;
+    font-size: small;
+    color: brown;
+}

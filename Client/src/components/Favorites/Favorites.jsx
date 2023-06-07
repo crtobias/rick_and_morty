@@ -27,8 +27,8 @@ const Favorite = ({myFavorites}) => {
         <>
             <div class="hi">
             <select onChange={handleOrder} name="ordenar" id="">
-                <option value="A">Ascendente</option>
-                <option value="D">Decendente</option>
+                <option class="buto" value="A">Ascendente</option>
+                <option class="buto" value="D">Decendente</option>
             </select>
             <select onChange={handleFilter} name="hola" id="">
                 <option value="Male">Male</option>
@@ -36,7 +36,8 @@ const Favorite = ({myFavorites}) => {
                 <option value="Genderless">Genderless</option>
                 <option value="unknown">unknown</option>
             </select>   
-            </div>
+            </div> 
+            <div class="favi">
             {myFavorites.map((character) => (
             <Card
             id={character.id}
@@ -50,6 +51,8 @@ const Favorite = ({myFavorites}) => {
             onClose={character.onClose}
             /> 
             ))}
+            </div>
+            
         </>
     )
 }
@@ -57,6 +60,7 @@ const Favorite = ({myFavorites}) => {
 
 const mapStateToProps = (state) =>{
     return{
+        
         myFavorites: state.myFavorites
     }
 }
