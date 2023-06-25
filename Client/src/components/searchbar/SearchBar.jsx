@@ -10,7 +10,7 @@ import "./searchbar.css"
 
    return (
       <div class="sea">
-         <input class="inpu" type='search' id='search' value={id} onChange={handleChange}/>
+         <input placeholder="Buscar" class="inpu" type='search' id='search' value={id} onChange={handleChange}/>
          <button  class="bu" onClick={()=>onSearch(id)}>Agregar</button>
       </div>
    );

@@ -6,35 +6,23 @@
 }
 
 .but {
-    --bg: #1dd2ea;
-    --hover-bg: #ff90e8;
-    --hover-text: #000;
-    color: #fff;
-    padding: 0.8em 2em;
-    background: var(--bg);
-    transition: 0.2s;
-    margin-top: 1rem;
+  background-color: rgba(254, 254, 254, 0);
+  border: solid  0px rgba(0, 0, 0, 0.256);
+  border-style: thin;
+  margin: 1rem;
+  scale: 1.5;
   }
   
   .but:hover {
-    color: var(--hover-text);
-    transform: translate(-0.25rem,-0.25rem);
-    background: var(--hover-bg);
-    box-shadow: 0.25rem 0.25rem var(--bg);
+    color: white;
   }
   
   .but:active {
-    transform: translate(0);
-    box-shadow: none;
   }
 
   #i{
-    border-top-left-radius: 100px ;
-    border-bottom-left-radius:100px ;
 
   }
 
   #d{
-    border-top-right-radius: 100px ;
-    border-bottom-right-radius:100px ;
   }

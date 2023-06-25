@@ -15,9 +15,9 @@ export default function Nav({onSearch}){
             </button></Link>
 
             
-            <Link to="/about"><button class="but" >
+            {/* <Link to="/about"><button class="but" >
                About
-            </button></Link>
+            </button></Link> */}
 
             <Link to="/favorite"><button id="d" class="but" >
                Favorite
